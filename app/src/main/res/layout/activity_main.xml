@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -27,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -35,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -43,6 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -51,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -59,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -67,6 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -75,6 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -83,6 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -98,6 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -106,6 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -114,6 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -122,6 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -130,6 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -138,6 +152,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -146,6 +161,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -154,6 +170,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -162,6 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -177,6 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -185,6 +204,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -193,6 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -201,6 +222,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -209,6 +231,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -217,6 +240,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -225,6 +249,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -233,6 +258,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -241,6 +267,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -256,6 +283,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -264,6 +292,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -272,6 +301,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -280,6 +310,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -288,6 +319,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -296,6 +328,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -304,6 +337,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -312,6 +346,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -320,6 +355,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -335,6 +371,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -343,6 +380,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -351,6 +389,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -359,6 +398,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -367,6 +407,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -375,6 +416,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -383,6 +425,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -391,6 +434,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -399,6 +443,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -414,6 +459,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -422,6 +468,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -430,6 +477,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -438,6 +486,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -446,6 +495,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -454,6 +504,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -462,6 +513,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -470,6 +522,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -478,6 +531,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -493,6 +547,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -501,6 +556,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -509,6 +565,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -517,6 +574,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -525,6 +583,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -533,6 +592,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -541,6 +601,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -549,6 +610,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -557,6 +619,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -572,6 +635,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -580,6 +644,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -588,6 +653,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -596,6 +662,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -604,6 +671,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -612,6 +680,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -620,6 +689,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -628,6 +698,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -636,6 +707,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -651,6 +723,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -659,6 +732,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -667,6 +741,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -675,6 +750,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -683,6 +759,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -691,6 +768,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background2"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -699,6 +777,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -707,6 +786,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
 
         <Button
@@ -715,6 +795,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background1"
+            android:clickable="false"
             android:text="1" />
     </LinearLayout>
 
@@ -732,18 +813,6 @@
             android:layout_weight="1"
             android:background="@drawable/background"
             android:text="Check"
-            android:textAllCaps="false"
-            android:textColor="@android:color/background_light"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/btnclear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/background"
-            android:text="Clear"
             android:textAllCaps="false"
             android:textColor="@android:color/background_light"
             android:textSize="14sp" />
@@ -772,9 +841,11 @@
             android:textColor="@android:color/background_light"
             android:textSize="14sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -783,62 +854,89 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1" />
+            android:background="@android:color/background_light"
+            android:text="1"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2" />
+            android:background="@android:color/background_light"
+            android:text="2"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3" />
+            android:background="@android:color/background_light"
+            android:text="3"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4" />
+            android:background="@android:color/background_light"
+            android:text="4"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="5" />
+            android:background="@android:color/background_light"
+            android:text="5"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="6" />
+            android:background="@android:color/background_light"
+            android:text="6"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="7" />
+            android:background="@android:color/background_light"
+            android:text="7"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="8" />
+            android:background="@android:color/background_light"
+            android:text="8"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="9" />
+            android:background="@android:color/background_light"
+            android:text="9"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>

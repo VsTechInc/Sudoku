@@ -4,31 +4,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import java.util.Random;
-
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity{
 
     private Button[][] bord = new Button[9][9];
     private Button[] num = new Button[9];
-    public static int I,J;
-    private Button btncheck;
-    private Button btnclear;
-    private Button btnundo;
-    private Button btnsubmit;
+    public static int I = -1,J = -1;
+    public static int UndoI = -1,UndoJ = -1;
 
     int max = 8;
     int min = 0;
     int digitMax = 9;
     int digitMin = 1;
-    int easyMin = 36;
-    int easyMax = 49;
+    int easyMin = 35;
+    int easyMax = 40;
     int mediumMin = 32;
     int mediumMax = 35;
     int hardMin = 22;
@@ -43,10 +37,9 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btncheck = findViewById(R.id.btncheck);
-        btnclear = findViewById(R.id.btnclear);
-        btnundo = findViewById(R.id.btnundo);
-        btnsubmit = findViewById(R.id.btnsubmit);
+        Button btnCheck = findViewById(R.id.btncheck);
+        Button btnUndo = findViewById(R.id.btnundo);
+        Button btnSubmit = findViewById(R.id.btnsubmit);
 
         for (int x = 0; x<9; x++){
             int j = x + 1;
@@ -57,7 +50,12 @@ public class MainActivity extends AppCompatActivity{
             num[x].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    bord[I][J].setText(num[finalI1].getText().toString());
+                    if (I >= 0 || J >= 0){
+                        bord[I][J].setText(num[finalI1].getText().toString());
+                        saveForUndo(I,J);
+                        I = -1;
+                        J = -1;
+                    }
                 }
             });
         }
@@ -66,36 +64,24 @@ public class MainActivity extends AppCompatActivity{
                 String buttonID = "btn" + i + j;
                 int findID = getResources().getIdentifier(buttonID,"id",getPackageName());
                 bord[i][j] = findViewById(findID);
-                final int finalI = i;
-                final int finalJ = j;
-                bord[i][j].setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        clicked(finalI,finalJ);
-                    }
-                });
             }
         }
 
-        btncheck.setOnClickListener(new View.OnClickListener() {
+        btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
-        btnclear.setOnClickListener(new View.OnClickListener() {
+        btnUndo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clear();
+                if (UndoI != -1 && UndoJ != -1){
+                    undo();
+                }
             }
         });
-        btnundo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        btnsubmit.setOnClickListener(new View.OnClickListener() {
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 answer();
@@ -106,6 +92,15 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    private void saveForUndo(int i, int j) {
+        UndoI = i;
+        UndoJ = j;
+    }
+
+    private void undo() {
+        bord[UndoI][UndoJ].setText("");
+    }
+
     private void answer() {
         save();
         for (int i = 0; i < 9; i++) {
@@ -113,10 +108,13 @@ public class MainActivity extends AppCompatActivity{
                 int v;
                 v = nonnull(i,j);
                 if (noConflict(array,i,j,v)){
-                    Toast.makeText(MainActivity.this, "abc", LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Try Again!", LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "def", LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Successful", LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this,StartActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         }
@@ -173,6 +171,14 @@ public class MainActivity extends AppCompatActivity{
                 }
                 else {
                     bord[i][j].setText("");
+                    final int finalI = i;
+                    final int finalJ = j;
+                    bord[i][j].setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            clicked(finalI,finalJ);
+                        }
+                    });
                 }
             }
         }
@@ -201,7 +207,7 @@ public class MainActivity extends AppCompatActivity{
                 noOfCellsToBeGenerated = random.nextInt((hardMax - hardMin) + 1) + hardMin;
                 break;
             default:
-                noOfCellsToBeGenerated = random.nextInt(10);
+                noOfCellsToBeGenerated = 10;
                 break;
         }
 
@@ -219,33 +225,9 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
-    private void clear() {
-        for (int i = 0; i<9; i++){
-            for (int j = 0; j<9; j++){
-                if(isEditable(i,j)){
-                    bord[i][j].setText("");
-                }
-            }
-        }
-    }
-
-    private boolean isEditable(int i, int j) {
-        for (String s : generatedXY) {
-            char[] m = s.toCharArray();
-            char x = (char) (i + '0');
-            char y = (char) (j + '0');
-            Log.e("v", s);
-            //Toast.makeText(MainActivity.this,String.valueOf(generatedXY.length),LENGTH_SHORT).show();
-            return m[1] != x || m[3] != y;
-        }
-        return false;
-    }
-
     private void clicked(final int finalI, final int finalJ) {
-        if (isEditable(finalI,finalJ)){
-            I = finalI;
-            J = finalJ;
-        }
+          I = finalI;
+          J = finalJ;
     }
     public static boolean noConflict(int[][] array, int row, int col, int num) {
 

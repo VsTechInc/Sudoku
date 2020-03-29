@@ -19,7 +19,7 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         Spinner spinner = findViewById(R.id.spinner);
-        String[] sem = new String[]{"Select Hardness","Easy","Medium","Hard"};
+        String[] sem = new String[]{"Easy","Medium","Hard"};
         ArrayAdapter adapter = new ArrayAdapter<>(StartActivity.this,android.R.layout.simple_spinner_dropdown_item,sem);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -28,15 +28,12 @@ public class StartActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         Toast.makeText(StartActivity.this, "Select Hardness ", Toast.LENGTH_SHORT).show();
-                        level = "s";
-                        break;
-                    case 1:
                         level = "easy";
                         break;
-                    case 2:
+                    case 1:
                         level = "medium";
                         break;
-                    case 3:
+                    case 2:
                         level = "hard";
                         break;
                 }
