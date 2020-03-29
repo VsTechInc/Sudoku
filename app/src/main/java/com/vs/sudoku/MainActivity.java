@@ -1,9 +1,9 @@
 package com.vs.sudoku;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -70,7 +70,19 @@ public class MainActivity extends AppCompatActivity{
         btnCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int count = 0;
+                save();
+                int[] a = push(array);
+                Toast.makeText(MainActivity.this,"No Conflict",LENGTH_SHORT).show();
+                for (int i : a){
+                    if (i!=0 && i == Integer.parseInt(bord[I][J].getText().toString())){
+                        Log.e("v",i+"");
+                        count++;
+                        if (count > 2){
+                            Toast.makeText(MainActivity.this,"Conflict",LENGTH_SHORT).show();
+                        }
+                    }
+                }
             }
         });
         btnUndo.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +104,21 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    private int[] push(int[][] s) {
+        int[] a = new int[18];
+        if (I >= 0 && J >= 0){
+            for (int x = 0;x < 9;x++){
+                for (int y = 0;y < 9;y++){
+                    if (s[x][J] != 0 || s[I][y] != 0){
+                        a[x] = s[x][J];
+                        a[9+y] = s[I][y];
+                    }
+                }
+            }
+        }
+        return a;
+    }
+
     private void saveForUndo(int i, int j) {
         UndoI = i;
         UndoJ = j;
@@ -108,13 +135,13 @@ public class MainActivity extends AppCompatActivity{
                 int v;
                 v = nonnull(i,j);
                 if (noConflict(array,i,j,v)){
-                    Toast.makeText(MainActivity.this, "Try Again!", LENGTH_SHORT).show();
-                }
-                else {
                     Toast.makeText(MainActivity.this, "Successful", LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this,StartActivity.class);
                     startActivity(intent);
                     finish();
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "Try Again!", LENGTH_SHORT).show();
                 }
             }
         }
