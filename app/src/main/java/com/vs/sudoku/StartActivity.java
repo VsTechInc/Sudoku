@@ -14,13 +14,14 @@ import android.widget.Toast;
 public class StartActivity extends AppCompatActivity {
 
     public String level;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         Spinner spinner = findViewById(R.id.spinner);
-        String[] sem = new String[]{"Easy","Medium","Hard"};
-        ArrayAdapter adapter = new ArrayAdapter<>(StartActivity.this,android.R.layout.simple_spinner_dropdown_item,sem);
+        String[] sem = new String[]{"Easy", "Medium", "Hard"};
+        ArrayAdapter adapter = new ArrayAdapter<>(StartActivity.this, android.R.layout.simple_spinner_dropdown_item, sem);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -41,7 +42,7 @@ public class StartActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(StartActivity.this,"Please Select Hardness!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(StartActivity.this, "Please Select Hardness!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -49,8 +50,8 @@ public class StartActivity extends AppCompatActivity {
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this,MainActivity.class);
-                intent.putExtra("level",level);
+                Intent intent = new Intent(StartActivity.this, MainActivity.class);
+                intent.putExtra("level", level);
                 startActivity(intent);
                 finish();
             }
