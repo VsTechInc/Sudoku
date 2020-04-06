@@ -1,7 +1,5 @@
 package com.vs.sudoku;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -10,39 +8,83 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import java.util.Random;
+
+import hotchemi.android.rate.AppRate;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button[][] bord = new Button[9][9];
-    private Button[] num = new Button[9];
     public int I = -1, J = -1;
     public int UndoI = -1, UndoJ = -1;
     public Drawable background;
-
+    public int[][] grid = new int[9][9];
+    public int[][] array = new int[9][9];
     int easyMax = 35;
     int easyMin = 30;
     int mediumMax = 30;
     int mediumMin = 25;
     int hardMax = 25;
     int hardMin = 20;
-
-    public int[][] grid = new int[9][9];
-    public int[][] array = new int[9][9];
+    private Button[][] bord = new Button[9][9];
+    private Button[] num = new Button[9];
     private String[] generatedXY = new String[81];
     private int n = 0;
+
+    public static boolean noConflict(int[][] array, int row, int col, int num) {
+        for (int i = 0; i < 9; i++) {
+            if (array[row][i] == num) {
+                return false;
+            }
+            if (array[i][col] == num) {
+                return false;
+            }
+        }
+        int gridRow = row - (row % 3);
+        int gridColumn = col - (col % 3);
+        for (int p = gridRow; p < gridRow + 3; p++) {
+            for (int q = gridColumn; q < gridColumn + 3; q++) {
+                if (array[p][q] == num) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppRate.with(this)
+                .setInstallDays(3)
+                .setLaunchTimes(3)
+                .setRemindInterval(5)
+                .monitor();
+        AppRate.showRateDialogIfMeetsConditions(this);
 
         Button btnCheck = findViewById(R.id.btnCheck);
         Button btnClear = findViewById(R.id.btnClear);
         Button btnUndo = findViewById(R.id.btnUndo);
         Button btnSubmit = findViewById(R.id.btnSubmit);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         for (int x = 0; x < 9; x++) {
             int j = x + 1;
@@ -271,27 +313,6 @@ public class MainActivity extends AppCompatActivity {
     private void clicked(final int finalI, final int finalJ) {
         I = finalI;
         J = finalJ;
-    }
-
-    public static boolean noConflict(int[][] array, int row, int col, int num) {
-        for (int i = 0; i < 9; i++) {
-            if (array[row][i] == num) {
-                return false;
-            }
-            if (array[i][col] == num) {
-                return false;
-            }
-        }
-        int gridRow = row - (row % 3);
-        int gridColumn = col - (col % 3);
-        for (int p = gridRow; p < gridRow + 3; p++) {
-            for (int q = gridColumn; q < gridColumn + 3; q++) {
-                if (array[p][q] == num) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     @Override
